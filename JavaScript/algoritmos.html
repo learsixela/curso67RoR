@@ -177,6 +177,71 @@
         printUpTo(1000); // debería imprimir todos los enteros de 1 to 1000
         y = printUpTo(-10); // debería imprimir false
         console.log(y); // debería imprimir false
+
+        /*Ejercicio 17*/
+
+        /*
+        Completa el código de más abajo para que la función 
+        imprima enteros (integers) de 0 a x y 
+        donde cada entero imprima la suma (sum) parcial. 
+        Haz que la función entregue la suma final.
+        */
+        // variable = variable(valor) + algo
+        //i = i+1;
+
+        function printSum(x) { //x = 255
+            var sum = 0;
+            for (let i = 0; i <= x; i++) {
+                console.log("numero: " + i);
+                sum = sum + i;
+                console.log("suma parcial: " + sum);
+            }
+            return sum;
+        }
+        y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que por cada entero imprima la suma parcial.
+        console.log("Suma Final: " + y) // // debería imprimir 32640(suma final)
+
+        /*ejercicio 18*/
+        /* la función entregue la suma de todos
+        los valores en un array dado.*/
+        function printSumArray(x) { //x = [1,2,3]
+            var sum = 0; //sum = 6;  //acumular la suma parcial de los elementos
+            for (var i = 0; i < x.length; i++) { //i=3
+
+                sum = sum + x[i];
+                //  sum =  3  + x[2];
+                //  sum =  3  + 3;
+
+            }
+
+            return sum; //return 6;
+        }
+        console.log(printSumArray([1, 2, 3])); // debería imprimir 6
+        //console.log(6);
+        //respt.: 6
+
+        /*ejercicio 19*/
+        /*
+        Crea una función que entregue el elemento más grande (largest element) 
+        en un array. Por ejemplo largestElement([1,30,5,7]) 
+        debiera dar como resultado 30.
+        */
+        function largestElement(arreglo) {
+            let numeroMayor = arreglo[0]; //30
+
+            for (let i = 0; i < arreglo.length; i++) { //i=4
+                //       30     < 
+                if (numeroMayor < arreglo[i]) {
+                    numeroMayor = arreglo[i];
+                }
+            }
+
+            return numeroMayor; //return 30;
+        }
+
+        console.log(largestElement([1, 30, 5, 7]));
+        //console.log(30);
+        //respt.: 30
     </script>
 </head>
 
