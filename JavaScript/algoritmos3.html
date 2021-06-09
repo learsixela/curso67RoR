@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algoritmos III ::</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         /*ejercicio 1*/
         function a(x, y) { //x= 5 ; y= 5;
@@ -61,8 +62,8 @@
             z.push(x);
             return z; //return [2,2];
         }
-        y = a(2); //y = [2,2]
-        y.push(5); //y = [2,2,5]
+        var y = a(2); //y = [2,2]
+        //y.push(5); //y = [2,2,5]
         console.log(y); //console.log([2,2,5])
         //respt.:[2,2,5]
 
@@ -197,11 +198,18 @@
 
         y = squareValue([2, 5, 8]);
         console.log(y); // should log [4,25,64]
+
+        $(document).ready(function() {
+            $("#botonToggle").click(function() {
+                $("#panel").slideToggle("slow");
+            });
+        });
     </script>
 </head>
 
 <body>
-
+    <div id="panel">Hello world!</div>
+    <input type="button" id="botonToggle" value="Toogle">
 </body>
 
 </html>
