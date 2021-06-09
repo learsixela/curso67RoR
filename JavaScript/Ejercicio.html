@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function a(b, c) { //b=0: c=10;
+
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+
+            return b * c; //return 0*10; return 0: 
+            //return, es lo que se devuelve al llamado 
+            //de la funcion.
+        }
+
+        a(0, 10); //llamado a la funcion
+        //0 - es informativo
+        console.log(a(0, 10)); //console.log(0);//0
+
+
+        /*  **** ****** */
+        /*solo ejecucion dela funcion */
+        function ejemplo1(numero) { //numero= 4
+            console.log(numero); //se imprime 4
+        }
+        ejemplo1(4); //solo llama a la ejecucion de la funcion
+
+        /*se ejecuta, pero a la vez retorna */
+        function ejemplo2(numero) { //numero= 4
+            console.log(numero); // se imprime 4
+
+            return numero * 2; //return 4 * 2;//return 8;
+
+            //se retornara 8, donde se llamo a la funcion
+        }
+        ejemplo2(4); //recibo 8, NO HACE NADA,solo lo recibe
+
+        /*Se ejecuta, devuelve e imprime el retorno*/
+        function ejemplo3(numero) { //numero= 4
+            console.log(numero); // se imprime 4
+            return numero * 2; //return 4 * 2;//return 8;
+
+            //se retornara 8, donde se llamo a la funcion
+        }
+        console.log(ejemplo3(4)); //recibo 8, pero dentro del console.log
+        //console.log(8);  ... imprime 8
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
