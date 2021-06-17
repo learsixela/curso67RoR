@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gato::</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //estructura base jquery --> $('').accion(function(){});
+
+            for (let i = 0; i <= 4; i++) {
+                $('#container').append('<img src=img/ninja' + i + '.png alt-src=img/cat' + i + '.png><br>');
+            }
+            $('img').click(function() {
+                var temp = $(this).attr('src'); //almacena momentaneamente lo que este en src
+                $(this).attr('src', $(this).attr('alt-src')); //sobre escribe lo del src por el contenido de alt-src
+                $(this).attr('alt-src', temp); //sobre escribe el contenido de alt-src por temp
+            });
+
+            //fin JQuery
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <!-- <img src='ninja1.png' alt-src='cat1.png' />  -->
+    </div>
+</body>
+
+</html>
