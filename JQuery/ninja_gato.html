@@ -10,16 +10,39 @@
     <script>
         $(document).ready(function() {
             //estructura base jquery --> $('').accion(function(){});
+            function crearRestaurar() {
+                for (let i = 0; i <= 4; i++) {
+                    $('#container').append('<img  id="' + i + '" src=img/ninja' + i + '.png alt-src=img/cat' + i + '.png inicio="img/ninja' + i + '.png"><br>');
+                }
 
-            for (let i = 0; i <= 4; i++) {
-                $('#container').append('<img src=img/ninja' + i + '.png alt-src=img/cat' + i + '.png><br>');
+                $('img').click(function() {
+                    var temp = $(this).attr('src'); //almacena momentaneamente lo que este en src
+                    $(this).attr('src', $(this).attr('alt-src')); //sobre escribe lo del src por el contenido de alt-src
+                    $(this).attr('alt-src', temp); //sobre escribe el contenido de alt-src por temp
+                });
             }
-            $('img').click(function() {
-                var temp = $(this).attr('src'); //almacena momentaneamente lo que este en src
-                $(this).attr('src', $(this).attr('alt-src')); //sobre escribe lo del src por el contenido de alt-src
-                $(this).attr('alt-src', temp); //sobre escribe el contenido de alt-src por temp
-            });
+            crearRestaurar();
 
+            //boton despues de div container
+            $('#container').after('<button>Restaurar</button>');
+
+            $('button').click(function() {
+
+                //$('img').show();//lorent
+                //$('img').attr('src'); //Francisco
+                //$('img').attr('src', $('img').attr('inicio')); //Gio
+                //location.reload(); //NO ES LO QUE SE PIDE
+                /*for (let i = 0; i < 4; i++) {
+                    $('#' + i).attr('src', 'inicio');
+                }*/
+                /*
+                for (let a = 0; a <= 4; a++) {
+                    $('#container').html('<img src=img/ninja' + a + '.png>')
+                }
+                */
+                $('#container').html("");
+                crearRestaurar();
+            });
             //fin JQuery
         });
     </script>
@@ -27,8 +50,15 @@
 
 <body>
     <div id="container">
-        <!-- <img src='ninja1.png' alt-src='cat1.png' />  -->
+        <!--<img src='img/ninja0.png' alt-src='img/cat0.png' inicio="img/ninja0.png"><br>
+        <img src='img/ninja1.png' alt-src='img/cat1.png' inicio="img/ninja1.png"><br>
+        <img src='img/ninja2.png' alt-src='img/cat2.png' inicio="img/ninja2.png"><br>
+        <img src='img/ninja3.png' alt-src='img/cat3.png' inicio="img/ninja3.png"><br>
+        <img src='img/ninja4.png' alt-src='img/cat4.png' inicio="img/ninja4.png"> -->
     </div>
+    <!--<button>Restaurar</button>-->
+
+
 </body>
 
 </html>
